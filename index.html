@@ -566,24 +566,44 @@ At Aditya Enterprises, we don’t just build cold rooms — we build long-term r
       <h2>Product Catalogue</h2>
       <p>View our complete range of Bluestar commercial refrigeration products below:</p>
       <button
-        id="openPdfBtn"
-        style="
-          padding: 10px 20px;
-          font-weight: bold;
-          cursor: pointer;
-          background-color: var(--primary);
-          color: white;
-          border: none;
-          border-radius: 6px;
-          margin-bottom: 16px;
-          user-select: none;
-          transition: background-color 0.3s ease;
-        "
-        onmouseover="this.style.backgroundColor='var(--accent)';"
-        onmouseout="this.style.backgroundColor='var(--primary)';"
-      >
-        Open Fullscreen Catalogue
-      </button>
+  id="openPdfBtn"
+  style="
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    margin-bottom: 16px;
+    user-select: none;
+    box-shadow: 0 8px 15px rgba(37, 117, 252, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  "
+  onmouseover="this.style.boxShadow='0 15px 20px rgba(37, 117, 252, 0.6)'; this.style.transform='scale(1.05)'; this.querySelector('span').style.left='100%';"
+  onmouseout="this.style.boxShadow='0 8px 15px rgba(37, 117, 252, 0.3)'; this.style.transform='scale(1)'; this.querySelector('span').style.left='-100%';"
+>
+  Open Fullscreen Catalogue
+  <span
+    style="
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: skewX(-20deg);
+      transition: left 0.4s ease;
+      pointer-events: none;
+      z-index: 1;
+    "
+  ></span>
+</button>
+
 
       <div
         id="pdfModal"
@@ -645,31 +665,84 @@ At Aditya Enterprises, we don’t just build cold rooms — we build long-term r
         ></iframe>
       </div>
 
-      <a
-        href="Commercial Refrigeration E-catalogue (1).pdf"
-        download
-        id="downloadBtn"
-        style="
-          display: inline-block;
-          margin-top: 20px;
-          padding: 12px 28px;
-          background-color: var(--primary);
-          color: white;
-          font-weight: 600;
-          text-decoration: none;
-          border-radius: 8px;
-          user-select: none;
-          box-shadow: 0 4px 12px rgba(30, 64, 175, 0.6);
-          transition:
-            background-color 0.3s ease,
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-        "
-        onmouseover="this.style.backgroundColor='var(--accent)'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(59, 109, 231, 0.8)';"
-        onmouseout="this.style.backgroundColor='var(--primary)'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(30, 64, 175, 0.6)';"
-      >
-        Download Catalogue
-      </a>
+      <a href="Commercial Refrigeration E-catalogue (1).pdf" download style="text-decoration: none;">
+  <button
+    style="
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 8px 15px rgba(37, 117, 252, 0.3);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    "
+    onmouseover="this.style.boxShadow='0 15px 20px rgba(37, 117, 252, 0.6)'; this.style.transform='scale(1.05)'; this.querySelector('span').style.left='100%';"
+    onmouseout="this.style.boxShadow='0 8px 15px rgba(37, 117, 252, 0.3)'; this.style.transform='scale(1)'; this.querySelector('span').style.left='-100%';"
+  >
+    Download Catalogue
+    <span
+      style="
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-20deg);
+        transition: left 0.4s ease;
+        pointer-events: none;
+        z-index: 1;
+      "
+    ></span>
+  </button>
+</a>
+<a href="pdf.pdf" download style="text-decoration: none; margin-left: 15px;">
+  <button
+    style="
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      box-shadow: 0 8px 15px rgba(37, 117, 252, 0.3);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    "
+    onmouseover="this.style.boxShadow='0 15px 20px rgba(37, 117, 252, 0.6)'; this.style.transform='scale(1.05)'; this.querySelector('span').style.left='100%';"
+    onmouseout="this.style.boxShadow='0 8px 15px rgba(37, 117, 252, 0.3)'; this.style.transform='scale(1)'; this.querySelector('span').style.left='-100%';"
+  >
+    Brochure Datasheet
+    <span
+      style="
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transform: skewX(-20deg);
+        transition: left 0.4s ease;
+        pointer-events: none;
+        z-index: 1;
+      "
+    ></span>
+  </button>
+</a>
+
+
     </section>
 
     <section id="contact" tabindex="-1">
